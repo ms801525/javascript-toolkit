@@ -14,25 +14,41 @@
         <script src="script.js" async defer></script>
     </head>
     <body>
-        <div>
+        <div class="div">
             <h1>Calculator</h1>
-            <input class="calculate-input" type="text" placeholder="Enter expression to be calculated">
-            <button class="calculate-button">Calculate</button>
+
+            <input class="calculate-input" type="number" placeholder="Enter expression to be calculated" id="input1">
+            <select name="operations" id="operations" class="calculate-select">
+                <option value="add">+</option>
+                <option value="subtract">-</option>
+                <option value="multiply">X</option>
+                <option value="divide">/</option>
+            </select>
+            <input class="calculate-input" type="number" placeholder="Enter expression to be calculated" id="input2">
+
+            <button class="calculate-button" id="calculate-button">Calculate</button>
+            <div class="calculate-output">
+                <p id="output"></p>
+            </div>
+
 
         </div>
-        <div>
+
+
+
+        <div class="div">
             <h1>Unit Converter</h1>
             <input class="unit-converter-input" type="text" placeholder="Enter value to be converted">
             <button class="unit-converter-button">Convert</button>
 
         </div>
-        <div>
+        <div class="div">
             <h1>Text Analyzer</h1>
             <input class="text-input" type="text" placeholder="Enter text to be analyzed">
             <button class="text-analyzer-button">Analyze</button>
 
         </div>
-        <div>
+        <div class="div">
             <h1>JSON Formatter</h1>
             <input class="json-formatter-input" type="text" placeholder="Enter JSON to be formatted">
             <button class="json-formatter-button">Format</button>
