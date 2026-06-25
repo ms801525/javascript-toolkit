@@ -1,3 +1,43 @@
 h1 {
-    color: blue;
+    color: black;
+}
+body{
+    background-color: lightblue;
+    justify-content: center;
+    align-items: center;
+}
+
+div{
+    border-style: solid;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    height: 200px;
+    width: auto;
+    border-radius: 20px;
+}
+.calculate-button, .unit-converter-button, .text-analyzer-button, .json-formatter-button {
+    background-color:rgb(205, 180, 230);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.calculate-input, .unit-converter-input, .text-input, .json-formatter-input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+button:hover {
+    background-color: rgb(150, 100, 200);
+    color: white;
 }
