@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -14,9 +14,9 @@
         <script src="script.js" async defer></script>
     </head>
     <body>
+    <!-- This is code for the Calculator -->
         <div class="div">
             <h1>Calculator</h1>
-
             <input class="calculate-input" type="number" placeholder="Enter expression to be calculated" id="input1">
             <select name="operations" id="operations" class="calculate-select">
                 <option value="add">+</option>
@@ -28,26 +28,30 @@
 
             <button class="calculate-button" id="calculate-button">Calculate</button>
             <div class="calculate-output">
-                <p id="output"></p>
+                <p id="output" class="output"></p>
             </div>
-
-
         </div>
 
 
-
+    <!-- This is code for the Unit Converter -->
         <div class="div">
             <h1>Unit Converter</h1>
             <input class="unit-converter-input" type="text" placeholder="Enter value to be converted">
             <button class="unit-converter-button">Convert</button>
 
         </div>
+
+
+    <!-- This is code for the Text Analyzer -->
         <div class="div">
             <h1>Text Analyzer</h1>
             <input class="text-input" type="text" placeholder="Enter text to be analyzed">
             <button class="text-analyzer-button">Analyze</button>
 
         </div>
+
+
+    <!-- This is code for the JSON Formatter -->
         <div class="div">
             <h1>JSON Formatter</h1>
             <input class="json-formatter-input" type="text" placeholder="Enter JSON to be formatted">

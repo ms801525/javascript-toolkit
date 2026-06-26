@@ -7,7 +7,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-
+/* This is code for the divs of each feature */
 .div{
     border-style: solid;
     margin-bottom: 5px;
@@ -18,6 +18,7 @@ body{
     border-radius: 20px;
     background-color: rgb(242, 242, 242);
 }
+/* This is code for the buttons of each feature */
 .calculate-button, .unit-converter-button, .text-analyzer-button, .json-formatter-button {
     background-color:rgb(205, 180, 230);
     border: none;
@@ -31,7 +32,7 @@ body{
     margin: 4px 2px;
     cursor: pointer;
 }
-
+/* This is code for the Calculator */
 .calculate-select {
     padding: 7px;
     width: 50px;
@@ -39,6 +40,7 @@ body{
     border: 1px solid #ccc;
     font-size: 16px;
 }
+/* This is code for the Caculator calculation */
 .calculate-output{
     padding: 10px;
     margin-right: 10px;
@@ -49,7 +51,7 @@ body{
     font-size: 16px;
     float: right;
 }
-
+/* This is code for the inputs of each feature */
 .calculate-input, .unit-converter-input, .text-input, .json-formatter-input {
     padding: 10px;
     width: 300px;
@@ -57,7 +59,14 @@ body{
     border: 1px solid #ccc;
     font-size: 16px;
 }
+/* This is code for the Calculator button hover effect */
 button:hover {
     background-color: rgb(150, 100, 200);
     color: white;
 }
+/* This is code for the Calculator output */
+.output{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
