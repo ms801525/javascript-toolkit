@@ -18,6 +18,7 @@
         <div class="div">
             <h1>Calculator</h1>
             <input class="calculate-input" type="number" placeholder="Enter expression to be calculated" id="input1">
+            <!--add select dropdown to choose operation-->
             <select name="operations" id="operations" class="calculate-select">
                 <option value="add">+</option>
                 <option value="subtract">-</option>
@@ -25,7 +26,7 @@
                 <option value="divide">/</option>
             </select>
             <input class="calculate-input" type="number" placeholder="Enter expression to be calculated" id="input2">
-
+            <!--add button to click to perform calculations and get results-->
             <button class="calculate-button" id="calculate-button">Calculate</button>
             <div class="calculate-output">
                 <p id="output" class="output"></p>
@@ -36,8 +37,28 @@
     <!-- This is code for the Unit Converter -->
         <div class="div">
             <h1>Unit Converter</h1>
-            <input class="unit-converter-input" type="text" placeholder="Enter value to be converted">
-            <button class="unit-converter-button">Convert</button>
+            <input id = "unit-converter-input" class="unit-converter-input" type="number" placeholder="Enter value to be converted">
+            <select name="unit-converter-select" id="unit-converter-select" class="unit-converter-select">
+            <!-- Add more unit conversion options as needed -->
+                <option value="kg-to-lbs">kg to lbs</option>
+                <option value="km-to-miles">km to miles</option>
+                <option value="celsius-to-fahrenheit">celsius to fahrenheit</option>
+                <option value="lbs-to-kg">lbs to kg</option>
+                <option value="miles-to-km">miles to km</option>
+                <option value="fahrenheit-to-celsius">fahrenheit to celsius</option>
+                <option value="meters-to-feet">meters to feet</option>
+                <option value="feet-to-meters">feet to meters</option>
+                <option value="liters-to-gallons">liters to gallons</option>
+                <option value="gallons-to-liters">gallons to liters</option>
+                <option value="inches-to-centimeters">inches to centimeters</option>
+                <option value="centimeters-to-inches">centimeters to inches</option>
+            </select>
+            <!--add button to click to perform calculations and get results-->
+            <button class="unit-converter-button" id="unit-converter-button">Convert</button>
+            <!--add output to display results-->
+            <div class="unit-converter-output">
+                <p id="unit-converter-output" class="output"></p>
+            </div>
 
         </div>
 
