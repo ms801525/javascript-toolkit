@@ -80,4 +80,15 @@ button:hover {
     float: right;
     
 }
+.text-analyzer-output{
+    padding: 10px;
+    margin-right: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border-style: solid;
+    border-radius: 20px;
+    font-size: 16px;
+    float: right;
+    
+}
 

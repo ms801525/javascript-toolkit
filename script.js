@@ -141,3 +141,59 @@ button2.addEventListener("click", function () {
     // Display the answer in the output <div> element with id "unit-converter-output"
     document.getElementById("unit-converter-output").innerHTML = answer;
 });
+
+const button3 = document.getElementById("text-analyzer-button");
+button3.addEventListener("click", function () {
+    const input4 = document.getElementById("text-analyzer-input").value;
+    const textAnalyzerSelect = document.getElementById("text-analyzer-select");
+
+    let answer;
+    //Character count code
+    if (textAnalyzerSelect.value === "char-count") {
+        answer = input4.length;
+    }
+    //Word count code
+    else if (textAnalyzerSelect.value === "word-count") {
+        answer = input4.split(' ').length;
+    }
+    //Sentence count code
+    else if (textAnalyzerSelect.value === "sentence-count") {
+        answer = input4.split(".").length - 1;
+    }
+//Most common word code
+    else if (textAnalyzerSelect.value === "most-common-word") {
+        //split the input text into an array of words and count the occurrences of each word
+        const words = input4.split(' ');
+        //create an object to store the word count
+        const wordCount = {};
+        //initialize variables to keep track of the most common word and its count
+        let maxCount = 0;
+        //initialize a variable to store the most common word
+        let mostCommonWord = '';
+        //loop through the array of words and count the occurrences of each word
+        for (let i = 0; i < words.length; i++) {
+            const word = words[i].toLowerCase();
+            //check if the word is already in the wordCount object, if it is, increment its count, if not, add it to the object with a count of 1
+            if (wordCount[word]) {
+                wordCount[word]++;
+                //check if the current word's count is greater than the maxCount, if it is, update the maxCount and mostCommonWord variables
+            } else {
+                wordCount[word] = 1;
+            }
+            if (wordCount[word] > maxCount) {
+                //update the maxCount and mostCommonWord variables
+                maxCount = wordCount[word];
+                //update the mostCommonWord variable with the current word
+                mostCommonWord = word;
+            }
+        }
+        //set the answer variable to the most common word
+        answer = mostCommonWord;
+    }
+    else {
+        //if the selected option is not valid, set the answer variable to "Invalid analysis"
+        answer = "Invalid analysis";
+    }
+    // Display the answer in the output <div> element with id "text-analyzer-output"
+    document.getElementById("text-analyzer-output").innerHTML = answer;
+});

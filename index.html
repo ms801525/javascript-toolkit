@@ -66,8 +66,17 @@
     <!-- This is code for the Text Analyzer -->
         <div class="div">
             <h1>Text Analyzer</h1>
-            <input class="text-input" type="text" placeholder="Enter text to be analyzed">
-            <button class="text-analyzer-button">Analyze</button>
+            <input id="text-analyzer-input" class="text-input" type="text" placeholder="Enter text to be analyzed">
+            <select name="text-analyzer-select" id="text-analyzer-select" class="text-analyzer-select">
+                <option value="char-count">Character Count</option>
+                <option value="word-count">Word Count</option>
+                <option value="sentence-count">Sentence Count</option>
+                <option value="most-common-word">Most Common Word</option>
+            </select>
+            <button class="text-analyzer-button" id="text-analyzer-button">Analyze</button>
+            <div class="text-analyzer-output">
+                <p id="text-analyzer-output" class="output"></p>
+            </div>
 
         </div>
 
