@@ -197,3 +197,33 @@ button3.addEventListener("click", function () {
     // Display the answer in the output <div> element with id "text-analyzer-output"
     document.getElementById("text-analyzer-output").innerHTML = answer;
 });
+
+
+const button4 = document.getElementById("json-formatter-button")
+button4.addEventListener("click", function () {
+    const output1 = document.getElementById("json-formatter-input-a").value;
+    const output2 = document.getElementById("json-formatter-input-b").value;
+    const output3 = document.getElementById("json-formatter-input-2a").value;
+    const output4 = document.getElementById("json-formatter-input-2b").value;
+    const output5 = document.getElementById("json-formatter-input-3a").value;
+    const output6 = document.getElementById("json-formatter-input-3b").value;
+
+        const format = {
+            [output1]: output2,
+            [output3]: output4,
+            [output5]: output6 
+        };
+
+    if (output1 === "") {
+        document.getElementById("json-formatter-output").innerHTML = "Invalid, first JSON pair must not be empty";
+    }
+    else {
+
+
+        const obj_format = JSON.stringify(format, null, '<br>')
+    
+
+
+        document.getElementById("json-formatter-output").innerHTML = obj_format;
+    }
+});

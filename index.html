@@ -84,8 +84,27 @@
     <!-- This is code for the JSON Formatter -->
         <div class="div">
             <h1>JSON Formatter</h1>
-            <input class="json-formatter-input" type="text" placeholder="Enter JSON to be formatted">
-            <button class="json-formatter-button">Format</button>
+            
+            <div class="flex-div-formatter">
+            <input class="json-formatter-input" id="json-formatter-input-a" type="text" placeholder="(REQUIRED)Enter title (e.g Car, Name...)">
+           
+            <input class="json-formatter-input" id="json-formatter-input-2a" type="text" placeholder="Enter title (e.g Car, Name...)">
+
+            <input class="json-formatter-input" id="json-formatter-input-3a" type="text" placeholder="Enter title (e.g Car, Name...)">
+            </div>
+            <div class="flex-div-formatter">
+            <input class="json-formatter-input" id="json-formatter-input-b" type="text" placeholder="Enter text for to be formatted">
+           
+            <input class="json-formatter-input" id="json-formatter-input-2b" type="text" placeholder="Enter text for to be formatted">
+
+            <input class="json-formatter-input" id="json-formatter-input-3b" type="text" placeholder="Enter text for to be formatted">
+            </div>
+
+            <button id="json-formatter-button" class="json-formatter-button">Format</button>
+            <div class="json-formatter-output">
+                <p id="json-formatter-output" class="json-output"></p>
+
+            </div>
 
         </div>
         

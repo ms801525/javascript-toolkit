@@ -52,12 +52,20 @@ body{
     float: right;
 }
 /* This is code for the inputs of each feature */
-.calculate-input, .unit-converter-input, .text-input, .json-formatter-input {
+.calculate-input, .unit-converter-input, .text-input {
     padding: 10px;
     width: 300px;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 16px;
+}
+.json-formatter-input{
+    padding: 5px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    margin: 3px;
 }
 /* This is code for the Calculator button hover effect */
 button:hover {
@@ -69,7 +77,12 @@ button:hover {
     font-size: 15px;
     margin-bottom: 10px;
 }
-.unit-converter-output{
+.json-output{
+    word-wrap: break-word;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.unit-converter-output, .text-analyzer-output, .json-formatter-output{
     padding: 10px;
     margin-right: 10px;
     width: 200px;
@@ -80,14 +93,9 @@ button:hover {
     float: right;
     
 }
-.text-analyzer-output{
-    padding: 10px;
+.flex-div-formatter{
+    display: inline-grid;
+    align-self: center;
     margin-right: 10px;
-    width: 200px;
-    border-radius: 5px;
-    border-style: solid;
-    border-radius: 20px;
-    font-size: 16px;
-    float: right;
-    
+    margin-top: 10px;
 }
