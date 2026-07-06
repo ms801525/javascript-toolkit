@@ -200,6 +200,7 @@ button3.addEventListener("click", function () {
 
 
 const button4 = document.getElementById("json-formatter-button")
+//add event listener for click event 
 button4.addEventListener("click", function () {
     const output1 = document.getElementById("json-formatter-input-a").value;
     const output2 = document.getElementById("json-formatter-input-b").value;
@@ -207,13 +208,13 @@ button4.addEventListener("click", function () {
     const output4 = document.getElementById("json-formatter-input-2b").value;
     const output5 = document.getElementById("json-formatter-input-3a").value;
     const output6 = document.getElementById("json-formatter-input-3b").value;
-
+        //to do key value pair with the key also being the user input, you need to add them to a list in square brackets
         const format = {
             [output1]: output2,
             [output3]: output4,
             [output5]: output6 
         };
-
+    //if first input box is empty add error, first one required last 2 are optional 
     if (output1 === "") {
         document.getElementById("json-formatter-output").innerHTML = "Invalid, first JSON pair must not be empty";
     }
