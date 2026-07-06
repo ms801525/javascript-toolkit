@@ -77,11 +77,7 @@ button:hover {
     font-size: 15px;
     margin-bottom: 10px;
 }
-.json-output{
-    word-wrap: break-word;
-    font-size: 15px;
-    margin-bottom: 10px;
-}
+/* this is styling for the outputs of each calculation*/
 .unit-converter-output, .text-analyzer-output, .json-formatter-output{
     padding: 10px;
     margin-right: 10px;
@@ -93,6 +89,7 @@ button:hover {
     float: right;
     
 }
+/* styling for the 6 input boxes for the JSON formatter */
 .flex-div-formatter{
     display: inline-grid;
     align-self: center;

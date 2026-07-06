@@ -202,6 +202,7 @@ button3.addEventListener("click", function () {
 const button4 = document.getElementById("json-formatter-button")
 //add event listener for click event 
 button4.addEventListener("click", function () {
+    //get the value of each 6 input boxesß
     const output1 = document.getElementById("json-formatter-input-a").value;
     const output2 = document.getElementById("json-formatter-input-b").value;
     const output3 = document.getElementById("json-formatter-input-2a").value;
@@ -220,11 +221,11 @@ button4.addEventListener("click", function () {
     }
     else {
 
-
+        //each key value pair to be on new line for text visibility 
         const obj_format = JSON.stringify(format, null, '<br>')
     
 
-
+        //output the new JSON formatted text
         document.getElementById("json-formatter-output").innerHTML = obj_format;
     }
 });
