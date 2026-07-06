@@ -229,3 +229,46 @@ button4.addEventListener("click", function () {
         document.getElementById("json-formatter-output").innerHTML = obj_format;
     }
 });
+
+//code for clear button for calculator
+const button_clear = document.getElementById("clear-button-calculator")
+
+button_clear.addEventListener("click", function () {
+    
+    const input_field_a = document.getElementById("input1").value = ''
+    const input_field_b = document.getElementById("input2").value = ''
+
+    location.reload()
+});
+//code for unit converter clear button 
+const button_clear2 = document.getElementById("clear-button-unit")
+
+button_clear2.addEventListener("click", function () {
+    
+    const input_json = document.getElementById("unit-converter-input").value = ''
+    location.reload()
+});
+
+//code for text analyzer clear button
+const button_clear3 = document.getElementById("clear-button-analyzer")
+
+button_clear3.addEventListener("click", function () {
+    
+    const input_json = document.getElementById("text-analyzer-input").value = ''
+    location.reload()
+});
+
+
+//code for JSON foratter clear button 
+const button_clear4 = document.getElementById("clear-button-json")
+
+button_clear4.addEventListener("click", function () {
+    
+    const input_json = document.getElementById("json-formatter-input-a").value = ''
+    const input_json2 = document.getElementById("json-formatter-input-2a").value = ''
+    const input_json3 = document.getElementById("json-formatter-input-3a").value = ''
+    const input_json4 = document.getElementById("json-formatter-input-b").value = ''
+    const input_json5 = document.getElementById("json-formatter-input-2b").value = ''
+    const input_json6 = document.getElementById("json-formatter-input-3b").value = ''
+    location.reload()
+});

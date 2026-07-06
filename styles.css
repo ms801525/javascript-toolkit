@@ -13,13 +13,26 @@ body{
     margin-bottom: 5px;
     padding-bottom: 5px;
     text-align: center;
-    height: 200px;
+    height: 300px;
     width: auto;
     border-radius: 20px;
     background-color: rgb(242, 242, 242);
 }
+select{
+    text-align: center;
+    padding: 5px 5px;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: grab;
+    background-color:rgba(255, 253, 253, 0.659);
+    border-radius: 10px;
+    border-color: black;
+    opacity:0.7;
+
+
+}
 /* This is code for the buttons of each feature */
-.calculate-button, .unit-converter-button, .text-analyzer-button, .json-formatter-button {
+.calculate-button, .unit-converter-button, .text-analyzer-button {
     background-color:rgb(205, 180, 230);
     border: none;
     color: white;
@@ -32,14 +45,33 @@ body{
     margin: 4px 2px;
     cursor: pointer;
 }
-/* This is code for the Calculator */
-.calculate-select {
-    padding: 7px;
-    width: 50px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
+.json-formatter-button{
+    background-color:rgb(205, 180, 230);
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
+.clear-button{
+    background-color:rgb(156, 159, 247);
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer; 
+}
+
 /* This is code for the Caculator calculation */
 .calculate-output{
     padding: 10px;
@@ -69,7 +101,7 @@ body{
 }
 /* This is code for the Calculator button hover effect */
 button:hover {
-    background-color: rgb(150, 100, 200);
+    background-color: rgb(115, 180, 237);
     color: white;
 }
 /* This is code for the Calculator output */
