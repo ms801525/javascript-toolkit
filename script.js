@@ -53,7 +53,7 @@ input2.addEventListener("keypress", function (event) {
 
     const operations = document.getElementById("operations");
     let answer;
-
+    //need event key to know when user clicks enter
     if (event.key === "Enter") {
 
         if (inputValue_calc === "" || inputValue_calc2 === "" || isNaN(num1) || isNaN(num2)) {
@@ -212,6 +212,7 @@ input_converter.addEventListener("keypress", function (event) {
 
     let answer;
     //=== "" means nothing was typed, so i am aksing if box is empty or input is not a number show an error, if either one is yes it becomes true and shows error, it catches the empty box before JS turns it into 0 
+    //need event key to know when user clicks enter
     if (event.key === "Enter") {
         if (inputValue === "" || isNaN(input3)) {
             answer = "Not valid, need to input a number";
@@ -388,7 +389,7 @@ button3.addEventListener("click", function () {
 //this is the code for text analyzer using the enter button 
 input_analyzer = document.getElementById("text-analyzer-input")
 input_analyzer.addEventListener("keypress", function (event) {
-
+//need event key to know when user clicks enter
     if (event.key === "Enter"){
         const input4 = document.getElementById("text-analyzer-input").value;
     const textAnalyzerSelect = document.getElementById("text-analyzer-select");
@@ -486,13 +487,12 @@ button4.addEventListener("click", function () {
         document.getElementById("json-formatter-output").innerHTML = obj_format;
     }
 });
-
-
+//code for the JSON formatter task using the enter button to perform task instead of button 
 input_json = document.querySelectorAll(".json-formatter-input");
 input_json.forEach(function (input) {
     
     input.addEventListener("keypress", function (event) { 
-
+        //need event key to know when user clicks enter
         if (event.key === "Enter") {
             event.preventDefault();
             //get the value of each 6 input boxesß

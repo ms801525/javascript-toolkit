@@ -21,6 +21,7 @@ button{
     border-radius: 20px;
     background-color: rgb(242, 242, 242);
 }
+/*code for the JSON formatter div*/
 .div-formatter{
     border-style: solid;
     margin-bottom: 5px;
@@ -31,6 +32,7 @@ button{
     border-radius: 20px;
     background-color: rgb(242, 242, 242);
 }
+/*Code for the select feature*/
 select{
     text-align: center;
     padding: 5px 5px;
@@ -57,6 +59,7 @@ select{
     margin: 20px auto;
     cursor: pointer;
 }
+/* code for the JSON formatter button*/
 .json-formatter-button{
     background-color:rgb(205, 180, 230);
     border: none;
@@ -71,6 +74,7 @@ select{
     font-size: 15px;
     cursor: pointer;
 }
+/* code for the clear button design */
 .clear-button{
     background-color:rgb(156, 159, 247);
     border: none;
