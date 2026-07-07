@@ -584,8 +584,14 @@ const output = document.getElementById("json-formatter-output");
 
 button_copy.addEventListener("click", function () {
     //use text content instead of value,p element does not have a value property, when displaying JSON inside <p> or any  text, use the content inside the p by doing text content 
-    navigator.clipboard.writeText(output.textContent);
-    document.getElementById("copied-text").innerHTML = "Copied!";
+    //to check the text use the text content becasue the output is the <pre> itself, you need the content in the <pre>
+    if (output.textContent.trim()==="") {
+        document.getElementById("copied-text").innerHTML = "Nothing to copy";
+    }
+    else {
+        navigator.clipboard.writeText(output.textContent);
+        document.getElementById("copied-text").innerHTML = "Copied!";
+    }
 
 
 });
