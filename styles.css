@@ -26,7 +26,7 @@ button{
     margin-bottom: 5px;
     padding-bottom: 5px;
     text-align: center;
-    height: 500px;
+    height: 600px;
     width: auto;
     border-radius: 20px;
     background-color: rgb(242, 242, 242);
@@ -105,7 +105,7 @@ select{
 .calculate-output{
     padding: 10px;
     margin : 20px auto;
-    width: 150px;
+    width: 600px;
     border-radius: 5px;
     border-style: solid;
     border-radius: 20px;
@@ -138,14 +138,14 @@ button:active{
 }
 /* This is code for the Calculator output */
 .output{
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 /* this is styling for the outputs of each calculation*/
 .unit-converter-output, .text-analyzer-output, .json-formatter-output{
     padding: 10px;
     margin: 20px auto;
-    width: 150px;
+    width: 600px;
     border-radius: 5px;
     border-style: solid;
     border-radius: 20px;
