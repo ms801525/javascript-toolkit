@@ -1,11 +1,14 @@
 h1 {
     color: black;
-    font-family: Arial, sans-serif;
+    font-family: monospace;
 }
 body{
     background-color: lightblue;
     justify-content: center;
     align-items: center;
+}
+button{
+    transition: .2s;
 }
 /* This is code for the divs of each feature */
 .div{
@@ -128,6 +131,10 @@ select{
 button:hover {
     background-color: rgb(115, 180, 237);
     color: white;
+    transform: translateY(-5px);
+}
+button:active{
+    transform:scale(.97);
 }
 /* This is code for the Calculator output */
 .output{
