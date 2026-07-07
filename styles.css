@@ -13,7 +13,17 @@ body{
     margin-bottom: 5px;
     padding-bottom: 5px;
     text-align: center;
-    height: 300px;
+    height: 350px;
+    width: auto;
+    border-radius: 20px;
+    background-color: rgb(242, 242, 242);
+}
+.div-formatter{
+    border-style: solid;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    height: 500px;
     width: auto;
     border-radius: 20px;
     background-color: rgb(242, 242, 242);
@@ -28,60 +38,75 @@ select{
     border-radius: 10px;
     border-color: black;
     opacity:0.7;
-
-
 }
 /* This is code for the buttons of each feature */
 .calculate-button, .unit-converter-button, .text-analyzer-button {
     background-color:rgb(205, 180, 230);
     border: none;
     color: white;
-    padding: 10px 10px;
+    padding: 20px;
+    width: 100px;
     text-align: center;
     text-decoration: none;
     color: black;
     display: inline-block;
     font-size: 15px;
-    margin: 4px 2px;
+    margin: 20px auto;
     cursor: pointer;
 }
 .json-formatter-button{
     background-color:rgb(205, 180, 230);
     border: none;
     color: white;
-    padding: 10px 10px;
+    padding: 20px;
+    width: 100px;
+    margin: 20px auto;
     text-align: center;
     text-decoration: none;
     color: black;
     display: inline-block;
     font-size: 15px;
-    margin: 4px 2px;
     cursor: pointer;
 }
 .clear-button{
     background-color:rgb(156, 159, 247);
     border: none;
     color: white;
-    padding: 10px 10px;
+    padding: 20px;
+    width: 100px;
     text-align: center;
     text-decoration: none;
     color: rgb(255, 255, 255);
     display: inline-block;
     font-size: 15px;
-    margin: 4px 2px;
+    margin: 15px;
     cursor: pointer; 
+}
+/* this is code for the copy button for json fornatter*/
+.copy-button{
+    background-color:rgb(147, 187, 245);
+    border: none;
+    color: white;
+    padding: 20px;
+    width: 100px;
+    margin: 20px auto;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
 }
 
 /* This is code for the Caculator calculation */
 .calculate-output{
     padding: 10px;
-    margin-right: 10px;
-    width: 200px;
+    margin : 20px auto;
+    width: 150px;
     border-radius: 5px;
     border-style: solid;
     border-radius: 20px;
     font-size: 16px;
-    float: right;
 }
 /* This is code for the inputs of each feature */
 .calculate-input, .unit-converter-input, .text-input {
@@ -112,13 +137,12 @@ button:hover {
 /* this is styling for the outputs of each calculation*/
 .unit-converter-output, .text-analyzer-output, .json-formatter-output{
     padding: 10px;
-    margin-right: 10px;
-    width: 200px;
+    margin: 20px auto;
+    width: 150px;
     border-radius: 5px;
     border-style: solid;
     border-radius: 20px;
     font-size: 16px;
-    float: right;
     
 }
 /* styling for the 6 input boxes for the JSON formatter */

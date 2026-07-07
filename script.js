@@ -272,3 +272,15 @@ button_clear4.addEventListener("click", function () {
     const input_json6 = document.getElementById("json-formatter-input-3b").value = ''
     location.reload()
 });
+// get the ID of both the button and output to conenct them
+const button_copy = document.getElementById("copy-button");
+const output = document.getElementById("json-formatter-output");
+
+button_copy.addEventListener("click", function () {
+    //use text content instead of value,p element does not have a value property, when displaying JSON inside <p> or any  text, use the content inside the p by doing text content 
+    navigator.clipboard.writeText(output.textContent);
+    alert("copied");
+
+
+});
+
