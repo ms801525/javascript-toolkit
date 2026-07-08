@@ -7,23 +7,27 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>JavaScript Utility Toolkit</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <script src="script.js" async defer></script>
     </head>
     <body>
+        <p class="p-title">Utility Toolkit</p>
     <!-- This is code for the Calculator -->
         <div class="div">
             <h1> Simple Calculator 🧮</h1>
+            <p class="description">This is a simple calculator that performs basic arithmetic operations instantly</p>
             <input class="calculate-input" type="number" placeholder="Enter expression to be calculated" id="input1">
             <!--add select dropdown to choose operation-->
             <select name="operations" id="operations" class="calculate-select">
-                <option value="add">+</option>
-                <option value="subtract">-</option>
-                <option value="multiply">X</option>
-                <option value="divide">/</option>
+                <option value="add">➕</option>
+                <option value="subtract">➖</option>
+                <option value="multiply">✖️</option>
+                <option value="divide">➗</option>
+                <option value="pow">EXP</option>
+                <option value="sqrt">√</option>
             </select>
             <input class="calculate-input" type="number" placeholder="Enter expression to be calculated" id="input2">
             <br>
@@ -40,6 +44,7 @@
     <!-- This is code for the Unit Converter -->
         <div class="div">
             <h1>Unit Converter 📏</h1>
+            <p class="description">Convert between common units with accurate real time results</p>
             <input id = "unit-converter-input" class="unit-converter-input" type="number" placeholder="Enter value to be converted">
             <select name="unit-converter-select" id="unit-converter-select" class="unit-converter-select">
             <!-- Add more unit conversion options as needed -->
@@ -70,9 +75,10 @@
 
 
     <!-- This is code for the Text Analyzer -->
-        <div class="div">
+        <div class="div-analyzer">
             <h1>Text Analyzer 📝</h1>
-            <input id="text-analyzer-input" class="text-input" type="text" placeholder="Enter text to be analyzed">
+            <p class="description">Analyzes your text with useful writing and readability statistics, box can be resized to fit large texts</p>
+            <textarea id="text-analyzer-input" class="text-input" type="text" placeholder="Enter text to be analyzed"></textarea>
             <select name="text-analyzer-select" id="text-analyzer-select" class="text-analyzer-select">
                 <option value="char-count">Character Count</option>
                 <option value="word-count">Word Count</option>
@@ -92,6 +98,7 @@
     <!-- This is code for the JSON Formatter -->
         <div class="div-formatter">
             <h1>JSON Formatter {}</h1>
+            <p class="description">Converts key-value pairs into clean, properly formatted JSON</p>
             
             <div class="flex-div-formatter">
             <input class="json-formatter-input" id="json-formatter-input-a" type="text" placeholder="(REQUIRED)Enter title (e.g Car, Name...)">
@@ -114,7 +121,7 @@
             <button id="clear-button-json" class="clear-button">Clear</button>
             <button id="copy-button" class="copy-button">Copy</button>
             <!-- Create a download Button -->
-            <p id="copied-text"></p>
+            <p id="copied-text" class="copied-text"></p>
             <div class="json-formatter-output">
                 <!--<pre> helps were preserving space and using new lines -->
                 <pre id="json-formatter-output" class="json-output"></pre>
@@ -123,5 +130,10 @@
         </div>
         
     </body>
+    <footer>
+        <p>Built by Mustafa Ali</p>
+        <p>HTML · CSS · JavaScript</p>
+
+    </footer>
 </html>
 <!--Add a footer end of the page-->

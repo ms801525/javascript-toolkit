@@ -2,10 +2,24 @@ h1 {
     color: black;
     font-family: monospace;
 }
+.p-title{
+    text-align: center;
+    font-size: 50px;
+    font-family: monospace;
+    border: solid;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(135, 199, 220);
+
+}
 body{
     background-color: lightblue;
     justify-content: center;
     align-items: center;
+}
+.description{
+    font-size: 15px;
+    font-family: monospace;
 }
 button{
     transition: .2s;
@@ -16,8 +30,8 @@ button{
     margin-bottom: 5px;
     padding-bottom: 5px;
     text-align: center;
-    height: 350px;
-    width: auto;
+    height: 100%;
+    width: 100%;
     border-radius: 20px;
     background-color: rgb(242, 242, 242);
 }
@@ -27,8 +41,18 @@ button{
     margin-bottom: 5px;
     padding-bottom: 5px;
     text-align: center;
-    height: 600px;
-    width: auto;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgb(242, 242, 242);
+}
+.div-analyzer{
+    border-style: solid;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
     border-radius: 20px;
     background-color: rgb(242, 242, 242);
 }
@@ -116,12 +140,24 @@ select{
     font-size: 16px;
 }
 /* This is code for the inputs of each feature */
-.calculate-input, .unit-converter-input, .text-input {
+.calculate-input, .unit-converter-input {
     padding: 10px;
     width: 300px;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 16px;
+}
+.text-input {
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: both;
+    max-width: 1100px;
+    max-height: 236px;
+    margin: 5px;
 }
 .json-formatter-input{
     padding: 5px;
@@ -162,4 +198,18 @@ button:active{
     align-self: center;
     margin-right: 10px;
     margin-top: 10px;
+}
+.copied-text{
+    font-size: 20px;
+    font-family: monospace;
+}
+footer{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: solid;
+    border-radius: 20px;
+    background-color: rgb(135, 199, 220);
+    font-size: 20px;
+    font-family: monospace;
 }

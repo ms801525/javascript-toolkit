@@ -1,5 +1,17 @@
 const button = document.getElementById("calculate-button");
+const input2box = document.getElementById("input2");
+const operations = document.getElementById("operations");
 
+operations.addEventListener("change", function () {
+    if (operations.value === "sqrt") {
+        input2box.disabled = true; 
+        input2box.value = "";
+
+    } 
+    else {
+        input2box.disabled = false;
+    }
+});
 
 button.addEventListener("click", function () {
 
@@ -11,9 +23,13 @@ button.addEventListener("click", function () {
     const operations = document.getElementById("operations");
 
     let answer;
-    //check if both inputs are empty or they are not numbers, catch it before js converts them to 0
-    if (inputValue_calc === "" || inputValue_calc2 === "" || isNaN(input1) || isNaN(input2)) {
-        answer = "Not Valid, Please Input Numbers"
+    //check if first number is empty and make sure the user inputs a first number
+    if (inputValue_calc === "" || isNaN(input1)) {
+        answer = "Not Valid, Please Input Numbers";
+    }
+    //for sqrt the user does not need to enter a second number but for all other operations a second number is needed 
+    else if (operations.value !== "sqrt" && (inputValue_calc2 === "" || isNaN(input2))) {
+        answer = "Not Valid, Please Input Second Number";
     }
     //Conversion operations 
     else if (operations.value === "add") {
@@ -33,18 +49,27 @@ button.addEventListener("click", function () {
             answer = input1 / input2;
         }
     }
+    else if (operations.value === "pow") {
+        answer = input1**input2;
+    }
+    else if (operations.value === "sqrt") {
+
+        answer = Math.sqrt(input1); 
+    }
     else {
         answer = "Invalid operation";
     }
 
 
     // Display the answer in the output <div> element with id "output"
-    document.getElementById("output").innerHTML = answer;
+    document.getElementById("output").innerHTML = "Result:  " + answer;
 
 });
 
-//code for using enter button instead of using button 
-input2.addEventListener("keypress", function (event) {
+
+
+//code for using enter button instead of using button for the calculator and user presses enter from first input box
+input1.addEventListener("keypress", function (event) {
     const inputValue_calc = document.getElementById("input1").value;
     const num1 = Number(inputValue_calc);
 
@@ -52,12 +77,17 @@ input2.addEventListener("keypress", function (event) {
     const num2 = Number(inputValue_calc2);
 
     const operations = document.getElementById("operations");
-    let answer;
     //need event key to know when user clicks enter
     if (event.key === "Enter") {
+        let answer;
 
-        if (inputValue_calc === "" || inputValue_calc2 === "" || isNaN(num1) || isNaN(num2)) {
+        //check if first number is empty and make sure the user inputs a first number
+        if (inputValue_calc === "" || isNaN(num1)) {
             answer = "Not Valid, Please Input Numbers";
+        }
+        //for sqrt the user does not need to enter a second number but for all other operations a second number is needed 
+        else if (operations.value !== "sqrt" && (inputValue_calc2 === "" || isNaN(num2))) {
+            answer = "Not Valid, Please Input Second Number";
         }
         else if (operations.value === "add") {
             answer = num1 + num2;
@@ -71,18 +101,82 @@ input2.addEventListener("keypress", function (event) {
         else if (operations.value === "divide") {
             if (num2 === 0) {
                 answer = "Cannot divide by zero!";
+    
             } else {
-                answer = num1 / num2;
+                answer = num1/ num2;
             }
+        }
+        else if (operations.value === "pow") {
+            answer = num1**num2;
+        }
+        else if (operations.value === "sqrt") {
+    
+            answer = Math.sqrt(num1); 
         }
         else {
             answer = "Invalid operation";
-        }
+        } 
 
-        document.getElementById("output").innerHTML = answer;
+        document.getElementById("output").innerHTML = "Result:  " +answer;
         event.preventDefault();
     }
 });
+//this is the code for the calculator where user presses enter from the second input box 
+input2.addEventListener("keypress", function (event) {
+    const inputValue_calc = document.getElementById("input1").value;
+    const num1 = Number(inputValue_calc);
+
+    const inputValue_calc2 = document.getElementById("input2").value;
+    const num2 = Number(inputValue_calc2);
+
+    const operations = document.getElementById("operations");
+    //need event key to know when user clicks enter
+    if (event.key === "Enter") {
+        let answer;
+
+        //check if first number is empty and make sure the user inputs a first number
+        if (inputValue_calc === "" || isNaN(num1)) {
+            answer = "Not Valid, Please Input Numbers";
+        }
+        //for sqrt the user does not need to enter a second number but for all other operations a second number is needed 
+        else if (operations.value !== "sqrt" && (inputValue_calc2 === "" || isNaN(num2))) {
+            answer = "Not Valid, Please Input Second Number";
+        }
+        else if (operations.value === "add") {
+            answer = num1 + num2;
+        }
+        else if (operations.value === "subtract") {
+            answer = num1 - num2;
+        }
+        else if (operations.value === "multiply") {
+            answer = num1 * num2;
+        }
+        else if (operations.value === "divide") {
+            if (num2 === 0) {
+                answer = "Cannot divide by zero!";
+    
+            } else {
+                answer = num1/ num2;
+            }
+        }
+        else if (operations.value === "pow") {
+            answer = num1**num2;
+        }
+        else if (operations.value === "sqrt") {
+    
+            answer = Math.sqrt(num1); 
+        }
+        else {
+            answer = "Invalid operation";
+        } 
+
+        document.getElementById("output").innerHTML = "Result:  " +answer;
+        event.preventDefault();
+    }
+});
+
+
+
 
 
 
@@ -199,7 +293,7 @@ button2.addEventListener("click", function () {
         answer = "Invalid conversion";
     }
     // Display the answer in the output <div> element with id "unit-converter-output"
-    document.getElementById("unit-converter-output").innerHTML = answer;
+    document.getElementById("unit-converter-output").innerHTML = "Result:  " +answer;
 });
 
 
@@ -317,10 +411,13 @@ input_converter.addEventListener("keypress", function (event) {
         }
     
         // Display the answer in the output <div> element with id "unit-converter-output"
-        document.getElementById("unit-converter-output").innerHTML = answer;
+        document.getElementById("unit-converter-output").innerHTML = "Result:  " +answer;
         event.preventDefault();
     }
 });
+
+
+
 
 
 
@@ -383,7 +480,7 @@ button3.addEventListener("click", function () {
         answer = "Invalid analysis";
     }
     // Display the answer in the output <div> element with id "text-analyzer-output"
-    document.getElementById("text-analyzer-output").innerHTML = answer;
+    document.getElementById("text-analyzer-output").innerHTML = "Result:  " +answer;
 });
 
 //this is the code for text analyzer using the enter button 
@@ -445,11 +542,17 @@ input_analyzer.addEventListener("keypress", function (event) {
         answer = "Invalid analysis";
     }
     // Display the answer in the output <div> element with id "text-analyzer-output"
-    document.getElementById("text-analyzer-output").innerHTML = answer;
+    document.getElementById("text-analyzer-output").innerHTML = "Result:  " +answer;
     event.preventDefault();
     }
 
 });
+
+
+
+
+
+
 
 
 const button4 = document.getElementById("json-formatter-button")
@@ -534,6 +637,13 @@ input_json.forEach(function (input) {
 
 });
 
+
+
+
+
+
+
+
 //code for clear button for calculator
 const button_clear = document.getElementById("clear-button-calculator")
 
@@ -582,6 +692,9 @@ button_clear4.addEventListener("click", function () {
 const button_copy = document.getElementById("copy-button");
 const output = document.getElementById("json-formatter-output");
 
+
+
+//copy button and checker for if field has any text in it to copy or not
 button_copy.addEventListener("click", function () {
     //use text content instead of value,p element does not have a value property, when displaying JSON inside <p> or any  text, use the content inside the p by doing text content 
     //to check the text use the text content becasue the output is the <pre> itself, you need the content in the <pre>
