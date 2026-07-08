@@ -141,7 +141,7 @@ Coming Soon
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/utility-toolkit.git
+git clone https://github.com/ms801525/javascript-toolkit.git
 ```
 
 Open:
