@@ -21,14 +21,16 @@
             <p class="description">This is a simple calculator that performs basic arithmetic operations instantly</p>
             <input class="calculate-input" type="number" placeholder="Enter expression to be calculated" id="input1">
             <!--add select dropdown to choose operation-->
-            <select name="operations" id="operations" class="calculate-select">
-                <option value="add">➕</option>
-                <option value="subtract">➖</option>
-                <option value="multiply">✖️</option>
-                <option value="divide">➗</option>
-                <option value="pow">EXP</option>
-                <option value="sqrt">√</option>
-            </select>
+            <div>
+                <select name="operations" id="operations" class="calculate-select">
+                    <option value="add">➕</option>
+                    <option value="subtract">➖</option>
+                    <option value="multiply">✖️</option>
+                    <option value="divide">➗</option>
+                    <option value="pow">EXP</option>
+                    <option value="sqrt">√</option>
+                </select>
+            </div>
             <input class="calculate-input" type="number" placeholder="Enter expression to be calculated" id="input2">
             <br>
             <!--add button to click to perform calculations and get results-->
@@ -46,21 +48,23 @@
             <h1>Unit Converter 📏</h1>
             <p class="description">Convert between common units with accurate real time results</p>
             <input id = "unit-converter-input" class="unit-converter-input" type="number" placeholder="Enter value to be converted">
-            <select name="unit-converter-select" id="unit-converter-select" class="unit-converter-select">
-            <!-- Add more unit conversion options as needed -->
-                <option value="kg-to-lbs">kg to lbs</option>
-                <option value="km-to-miles">km to miles</option>
-                <option value="celsius-to-fahrenheit">celsius to fahrenheit</option>
-                <option value="lbs-to-kg">lbs to kg</option>
-                <option value="miles-to-km">miles to km</option>
-                <option value="fahrenheit-to-celsius">fahrenheit to celsius</option>
-                <option value="meters-to-feet">meters to feet</option>
-                <option value="feet-to-meters">feet to meters</option>
-                <option value="liters-to-gallons">liters to gallons</option>
-                <option value="gallons-to-liters">gallons to liters</option>
-                <option value="inches-to-centimeters">inches to centimeters</option>
-                <option value="centimeters-to-inches">centimeters to inches</option>
-            </select>
+            <div>
+                <select name="unit-converter-select" id="unit-converter-select" class="unit-converter-select">
+                <!-- Add more unit conversion options as needed -->
+                    <option value="kg-to-lbs">kg to lbs</option>
+                    <option value="km-to-miles">km to miles</option>
+                    <option value="celsius-to-fahrenheit">celsius to fahrenheit</option>
+                    <option value="lbs-to-kg">lbs to kg</option>
+                    <option value="miles-to-km">miles to km</option>
+                    <option value="fahrenheit-to-celsius">fahrenheit to celsius</option>
+                    <option value="meters-to-feet">meters to feet</option>
+                    <option value="feet-to-meters">feet to meters</option>
+                    <option value="liters-to-gallons">liters to gallons</option>
+                    <option value="gallons-to-liters">gallons to liters</option>
+                    <option value="inches-to-centimeters">inches to centimeters</option>
+                    <option value="centimeters-to-inches">centimeters to inches</option>
+                </select>
+            </div>
             <br>
             <!--add button to click to perform calculations and get results-->
             <button class="unit-converter-button" id="unit-converter-button">Convert</button>
@@ -79,12 +83,14 @@
             <h1>Text Analyzer 📝</h1>
             <p class="description">Analyzes your text with useful writing and readability statistics, box can be resized to fit large texts</p>
             <textarea id="text-analyzer-input" class="text-input" type="text" placeholder="Enter text to be analyzed"></textarea>
-            <select name="text-analyzer-select" id="text-analyzer-select" class="text-analyzer-select">
-                <option value="char-count">Character Count</option>
-                <option value="word-count">Word Count</option>
-                <option value="sentence-count">Sentence Count</option>
-                <option value="most-common-word">Most Common Word</option>
-            </select>
+            <div>
+                <select name="text-analyzer-select" id="text-analyzer-select" class="text-analyzer-select">
+                    <option value="char-count">Character Count</option>
+                    <option value="word-count">Word Count</option>
+                    <option value="sentence-count">Sentence Count</option>
+                    <option value="most-common-word">Most Common Word</option>
+                </select>
+            </div>
             <br>
             <button class="text-analyzer-button" id="text-analyzer-button">Analyze</button>
             <button id="clear-button-analyzer" class="clear-button">Clear</button>

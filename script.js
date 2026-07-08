@@ -577,8 +577,8 @@ button4.addEventListener("click", function () {
                 format[output5] = output6;
             }
     //if first input box is empty add error, first one required last 2 are optional 
-    if (output1 === "") {
-        document.getElementById("json-formatter-output").innerHTML = "Invalid, first JSON pair must not be empty";
+    if (output1 === "" || output2 === "") {
+        document.getElementById("json-formatter-output").innerHTML = "Invalid, first JSON key:value pair must not be empty";
     }
     else {
 

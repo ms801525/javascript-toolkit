@@ -128,17 +128,6 @@ select{
     font-size: 15px;
     cursor: pointer;
 }
-
-/* This is code for the Caculator calculation */
-.calculate-output{
-    padding: 10px;
-    margin : 20px auto;
-    width: 600px;
-    border-radius: 5px;
-    border-style: solid;
-    border-radius: 20px;
-    font-size: 16px;
-}
 /* This is code for the inputs of each feature */
 .calculate-input, .unit-converter-input {
     padding: 10px;
@@ -146,6 +135,7 @@ select{
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 16px;
+    max-width:fit-content;
 }
 .text-input {
     padding: 10px;
@@ -155,7 +145,7 @@ select{
     border: 1px solid #ccc;
     font-size: 16px;
     resize: both;
-    max-width: 1100px;
+    max-width: 200px;
     max-height: 236px;
     margin: 5px;
 }
@@ -166,6 +156,7 @@ select{
     border: 1px solid #ccc;
     font-size: 15px;
     margin: 3px;
+    max-width: fit-content;
 }
 /* This is code for the Calculator button hover effect */
 button:hover {
@@ -178,19 +169,48 @@ button:active{
 }
 /* This is code for the Calculator output */
 .output{
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 10px;
 }
 /* this is styling for the outputs of each calculation*/
-.unit-converter-output, .text-analyzer-output, .json-formatter-output{
+.unit-converter-output, .text-analyzer-output {
     padding: 10px;
     margin: 20px auto;
-    width: 600px;
+    width: 100%;
     border-radius: 5px;
     border-style: solid;
     border-radius: 20px;
-    font-size: 16px;
+    max-width: 200px;
+    font-family: monospace;
     
+}
+.json-formatter-output{
+    padding: 10px;
+    margin: 20px auto;
+    width: 100%;
+    border-radius: 5px;
+    border-style: solid;
+    border-radius: 20px;
+    max-width: 200px;
+    font-family: monospace;
+}
+/* This is code for the Caculator calculation */
+.calculate-output{
+    padding: 10px;
+    margin : 20px auto;
+    width: 100%;
+    border-radius: 5px;
+    border-style: solid;
+    border-radius: 20px;
+    font-size: 15px;
+    max-width:200px;
+    font-family: monospace;
+}
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 15px;
 }
 /* styling for the 6 input boxes for the JSON formatter */
 .flex-div-formatter{
