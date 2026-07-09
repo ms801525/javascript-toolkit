@@ -171,6 +171,8 @@ button:active{
 .output{
     font-size: 15px;
     margin-bottom: 10px;
+    border-style: dashed;
+    border-radius: 10px;
 }
 /* this is styling for the outputs of each calculation*/
 .unit-converter-output, .text-analyzer-output {
@@ -178,7 +180,6 @@ button:active{
     margin: 20px auto;
     width: 100%;
     border-radius: 5px;
-    border-style: solid;
     border-radius: 20px;
     max-width: 200px;
     font-family: monospace;
@@ -189,7 +190,6 @@ button:active{
     margin: 20px auto;
     width: 100%;
     border-radius: 5px;
-    border-style: solid;
     border-radius: 20px;
     max-width: 200px;
     font-family: monospace;
@@ -200,7 +200,6 @@ button:active{
     margin : 20px auto;
     width: 100%;
     border-radius: 5px;
-    border-style: solid;
     border-radius: 20px;
     font-size: 15px;
     max-width:200px;
@@ -211,6 +210,8 @@ pre {
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-size: 15px;
+    border-style: dashed;
+    border-radius: 10px;
 }
 /* styling for the 6 input boxes for the JSON formatter */
 .flex-div-formatter{
