@@ -46,6 +46,7 @@ button{
     border-radius: 20px;
     background-color: rgb(242, 242, 242);
 }
+/* code for the text analyzer div*/
 .div-analyzer{
     border-style: solid;
     margin-bottom: 5px;
@@ -185,6 +186,7 @@ button:active{
     font-family: monospace;
     
 }
+/* this for the div tag for the JSON output*/
 .json-formatter-output{
     padding: 10px;
     margin: 20px auto;
@@ -205,6 +207,7 @@ button:active{
     max-width:200px;
     font-family: monospace;
 }
+/* code for the <pre> tag for the JSON output*/
 pre {
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -224,6 +227,7 @@ pre {
     font-size: 20px;
     font-family: monospace;
 }
+/* footer styling */
 footer{
     justify-content: center;
     align-items: center;
