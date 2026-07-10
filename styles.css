@@ -73,17 +73,70 @@ select{
 .calculate-button, .unit-converter-button, .text-analyzer-button {
     background-color:rgb(205, 180, 230);
     border: none;
-    color: white;
+    color: black;
     padding: 20px;
     width: 100px;
     text-align: center;
-    text-decoration: none;
     color: black;
+    position: relative;
     display: inline-block;
     font-size: 15px;
     margin: 20px auto;
     cursor: pointer;
+    transition: .3s;
+    
 }
+/* This is code for the Calculator button hover effect */
+button:hover {
+    background-color: rgb(115, 180, 237);
+    color: white;
+    transform: translateY(-5px);
+}
+button:active{
+    transform:scale(.97);
+}
+/* Create an invisible element after the button text to use as the loading spinner */
+/* Required to create the pseudo-element, even though it contains no text */
+button::after{
+    content: "";
+    /* Set the size of the loading spinner */
+    height: 14px;
+    width: 14px;
+    /* Position the spinner freely inside the button */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    /* Make one section brighter so the rotation looks like a spinning loader */
+    border-top-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    /* Move the spinner back by half its own size so it is perfectly centered */
+    transform: translate(-50%,-50%);
+
+
+
+}
+/* Hide the button text while loading */
+button.loading{
+    color: transparent;
+}
+/* Show and animate the spinner while the button is in the loading state */
+button.loading::after{
+    opacity: 1;
+    animation: spin 0.7s linear infinite;
+}
+/* Keep the spinner centered while rotating, since transform values don't combine automatically */
+@keyframes spin {
+    from{
+        transform: translate(-50%,-50%) rotate(0); /* Spinner stays centered and focused*/
+    }
+    to{
+        transform: translate(-50%,-50%) rotate(360deg);/* Spinner stays centered and focused*/
+    }
+    
+}
+
 /* code for the JSON formatter button*/
 .json-formatter-button{
     background-color:rgb(205, 180, 230);
@@ -99,16 +152,16 @@ select{
     font-size: 15px;
     cursor: pointer;
 }
+
 /* code for the clear button design */
 .clear-button{
     background-color:rgb(156, 159, 247);
     border: none;
-    color: white;
+    color: black;
     padding: 20px;
     width: 100px;
     text-align: center;
     text-decoration: none;
-    color: rgb(255, 255, 255);
     display: inline-block;
     font-size: 15px;
     margin: 15px;
@@ -159,20 +212,11 @@ select{
     margin: 3px;
     max-width: fit-content;
 }
-/* This is code for the Calculator button hover effect */
-button:hover {
-    background-color: rgb(115, 180, 237);
-    color: white;
-    transform: translateY(-5px);
-}
-button:active{
-    transform:scale(.97);
-}
 /* This is code for the Calculator output */
 .output{
     font-size: 15px;
     margin-bottom: 10px;
-    border-style: dashed;
+    border-style:double;
     border-radius: 10px;
 }
 /* this is styling for the outputs of each calculation*/
@@ -213,7 +257,7 @@ pre {
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-size: 15px;
-    border-style: dashed;
+    border-style: double;
     border-radius: 10px;
 }
 /* styling for the 6 input boxes for the JSON formatter */

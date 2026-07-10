@@ -15,7 +15,10 @@ operations.addEventListener("change", function () {
 
 button.addEventListener("click", function () {
 
-
+    button.classList.add("loading");
+    setTimeout(() => {
+        button.classList.remove("loading")
+    }, 1000);
     const inputValue_calc = document.getElementById("input1").value;
     const input1 = Number(inputValue_calc)
     const inputValue_calc2 = document.getElementById("input2").value;
@@ -188,6 +191,10 @@ button2.addEventListener("click", function () {
     const inputValue = document.getElementById("unit-converter-input").value;
     const input3 = Number(inputValue)
     const unitConverterSelect = document.getElementById("unit-converter-select");
+    button2.classList.add("loading");
+        setTimeout(() => {
+            button2.classList.remove("loading")
+        }, 1000);
 
     let answer;
     //=== "" means nothing was typed, so i am aksing if box is empty or input is not a number show an error, if either one is yes it becomes true and shows error, it catches the empty box before JS turns it into 0 
@@ -299,6 +306,7 @@ button2.addEventListener("click", function () {
 
 //this is the code for using the enter button to perform task
 input_converter = document.getElementById("unit-converter-input");
+
 input_converter.addEventListener("keypress", function (event) {
     const inputValue = document.getElementById("unit-converter-input").value;
     const input3 = Number(inputValue)
@@ -428,6 +436,12 @@ const button3 = document.getElementById("text-analyzer-button");
 button3.addEventListener("click", function () {
     const input4 = document.getElementById("text-analyzer-input").value;
     const textAnalyzerSelect = document.getElementById("text-analyzer-select");
+
+    button3.classList.add("loading");
+        setTimeout(() => {
+            button3.classList.remove("loading")
+            location.reload(3000);
+        }, 1000);
 
     let answer;
     if (input4 === "") {
@@ -565,6 +579,11 @@ button4.addEventListener("click", function () {
     const output4 = document.getElementById("json-formatter-input-2b").value;
     const output5 = document.getElementById("json-formatter-input-3a").value;
     const output6 = document.getElementById("json-formatter-input-3b").value;
+
+    button4.classList.add("loading");
+        setTimeout(() => {
+            button4.classList.remove("loading")
+        }, 1000);
         //to do key value pair with the key also being the user input, you need to add them to a list in square brackets
         const format = {};
             if (output1 !== "") {
@@ -696,6 +715,11 @@ const output = document.getElementById("json-formatter-output");
 
 //copy button and checker for if field has any text in it to copy or not
 button_copy.addEventListener("click", function () {
+
+    button_copy.classList.add("loading");
+        setTimeout(() => {
+            button_copy.classList.remove("loading");
+        }, 1000);
     //use text content instead of value,p element does not have a value property, when displaying JSON inside <p> or any  text, use the content inside the p by doing text content 
     //to check the text use the text content becasue the output is the <pre> itself, you need the content in the <pre>
     if (output.textContent.trim()==="") {
