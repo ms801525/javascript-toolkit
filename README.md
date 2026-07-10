@@ -132,9 +132,7 @@ This project helped reinforce:
 
 ## 🌐 Live Demo
 
-Coming Soon
-
----
+https://www.jsutilitytoolkit.com/
 
 ## 💻 Installation
 
