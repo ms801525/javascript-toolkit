@@ -440,7 +440,6 @@ button3.addEventListener("click", function () {
     button3.classList.add("loading");
         setTimeout(() => {
             button3.classList.remove("loading")
-            location.reload(3000);
         }, 1000);
 
     let answer;
