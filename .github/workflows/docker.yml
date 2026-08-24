@@ -24,7 +24,9 @@ jobs:
         run: docker run -d -p 8080:80 --name js-toolkit js-utility-toolkit
 
       - name: Test website
-        run: curl --fail http://localhost:8080
+        run: |
+          sleep 5
+          curl --fail http://localhost:8080
 
       - name: Stop container
         run: docker stop js-toolkit
